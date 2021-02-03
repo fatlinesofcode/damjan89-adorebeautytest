@@ -5,7 +5,7 @@ export function getProductsService(page, perPage, category) {
   let query = `limit=${perPage}&page=${page}`
   if(category) query+=`&categories:in=${category}`
   return new Promise(((resolve, reject) => {
-    axios.get(`http://localhost:3000/api/products/?${query}`).then((resp)=>{
+    axios.get(`/api/products/?${query}`).then((resp)=>{
       if(resp && resp.data){
         resolve(resp.data)
       } else {
