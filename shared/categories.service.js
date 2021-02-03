@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function getCategoriesService() {
   return new Promise(((resolve, reject) => {
-    axios.get('/api/categories/').then((resp)=>{
+    axios.get('https://adorebeauty.com.au/api/categories/').then((resp)=>{
       if(resp && resp.data){
         resolve(resp.data)
       } else {
